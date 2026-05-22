@@ -1,0 +1,42 @@
+{
+  "name": "tokenbucket-js",
+  "version": "1.2.4",
+  "description": "Lightweight, zero-dependency token bucket rate limiter for Node.js",
+  "main": "src/index.js",
+  "types": "src/index.d.ts",
+  "scripts": {
+    "pretest": "node scripts/preflight.js",
+    "test": "jest --config jest.config.js --verbose",
+    "test:coverage": "jest --coverage",
+    "lint": "eslint src/ test/",
+    "build": "node scripts/build.js",
+    "prepublishOnly": "npm run lint && npm test"
+  },
+  "keywords": [
+    "rate-limiter",
+    "token-bucket",
+    "throttle",
+    "rate-limit",
+    "middleware",
+    "express",
+    "fastify"
+  ],
+  "author": "Vikki Karpagarajan <vikki@tokenbucket.dev>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Karpagarajanvikkii/tokenbucket-js"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.56.0",
+    "jest": "^29.7.0"
+  },
+  "files": [
+    "src/",
+    "LICENSE",
+    "README.md"
+  ]
+}

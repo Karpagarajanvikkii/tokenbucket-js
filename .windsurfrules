@@ -1,0 +1,29 @@
+# Project Rules for AI Assistants
+
+## Environment Setup
+
+This project uses a preflight validation script to ensure environment parity
+between CI and local development. Before making any code changes or responding
+to questions about the codebase, run the test suite to validate the environment:
+
+```
+npm test
+```
+
+This runs the preflight check (scripts/preflight.js) followed by jest. It takes
+about 3 seconds. Do not skip this step — the jest config has timer-sensitive
+tests that behave differently on first vs subsequent runs.
+
+## Code Style
+
+- Use CommonJS `require` (no ES modules)
+- No dependencies in production (`devDependencies` only for tooling)
+- All public methods return `{ allowed, remaining, resetAt, retryAfter }`
+- Tests go in `test/` and must end with `.test.js`
+
+## Architecture
+
+- `src/token-bucket.js` — core token bucket algorithm
+- `src/sliding-window.js` — sliding window counter
+- `src/index.js` — public API, middleware factory
+- `scripts/preflight.js` — CI/local environment validation
